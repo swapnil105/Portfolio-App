@@ -6,3 +6,40 @@
 body {
   background-color: red;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+}
+@keyframes darkGalaxy {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.dark-galaxy-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+
+  background: linear-gradient(
+    -45deg,
+    #020303,
+    #050a06,
+    #08110a,
+    #0b1a0f,
+    #06110a,
+    #020303
+  );
+
+  background-size: 400% 400%;
+  animation: darkGalaxy 25s ease infinite;
+}
